@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi import HTTPExceptiong
 
 app = FastAPI()
 
@@ -11,7 +12,7 @@ books = []
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the Book API!"}
+    return {"message": "Welcome to the Amazing Book API! created by Iqra!"}
 
 @app.post("/books")
 def create_book(book: Book):
